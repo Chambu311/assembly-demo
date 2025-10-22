@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { Suspense } from "react";
 import PhotoGrid from "./components/photo-grid";
 
 
-async function Home({ searchParams }: { searchParams: { query?: Promise<string> } }) {
+export default async function Home({ searchParams }: { searchParams: { query?: Promise<string> } }) {
   const query = (await searchParams?.query) || '';
   return (
     <div className="min-h-screen bg-white">
@@ -42,13 +41,5 @@ async function Home({ searchParams }: { searchParams: { query?: Promise<string> 
         <PhotoGrid query={query} />
       </main>
     </div>
-  );
-}
-
-export default function HomePageWrapper({ searchParams }: { searchParams: { query?: Promise<string> } }) {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Home searchParams={searchParams} />
-    </Suspense>
   );
 }
