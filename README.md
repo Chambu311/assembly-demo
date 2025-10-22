@@ -1,8 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Unsplash Clone
+
+A modern photo gallery application built with Next.js, featuring real photos from the Pexels API. This is a clone of Unsplash with a clean, responsive design.
+
+## Features
+
+- 🖼️ **Real Photos**: Fetches trending photos from Pexels API
+- 🔍 **Search Functionality**: Search for photos by keywords
+- 📱 **Responsive Design**: Works on all device sizes
+- ⚡ **Fast Loading**: Optimized images with Next.js Image component
+- 🎨 **Modern UI**: Clean, Unsplash-inspired interface
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+1. Get a free API key from [Pexels](https://www.pexels.com/api/)
+2. Node.js 18+ installed
+
+### Setup
+
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd assembly-demo
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env.local` file in the root directory:
+```bash
+# Pexels API Key
+PEXELS_API_KEY=your_pexels_api_key_here
+
+# Next.js Base URL (for API calls)
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
