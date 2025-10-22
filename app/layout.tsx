@@ -2,6 +2,7 @@ import PhotoSearch from "./components/photo-search";
 import "./globals.css";
 import { Providers } from "./providers";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function RootLayout({
   children,
@@ -24,7 +25,9 @@ export default function RootLayout({
 
                   {/* Search Bar */}
                   <div className="flex-1">
-                    <PhotoSearch />
+                    <Suspense fallback={<div className="flex-1 px-4 py-2 border rounded-lg border-gray-300 bg-gray-100 animate-pulse"></div>}>
+                      <PhotoSearch />
+                    </Suspense>
                   </div>
                 </div>
               </div>
